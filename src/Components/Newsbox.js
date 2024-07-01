@@ -45,8 +45,8 @@ const styles = StyleSheet.create(
         },
 
         framestyle : {
-            borderColor: "#faedae",
-            backgroundColor: "#faedae",
+            borderColor: "#acb4ff",
+            backgroundColor: "#acb4ff",
             justifyContent: "center",
             flexDirection: "column",
             marginBottom: 10,

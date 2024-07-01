@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "20736361666",
+    "project_id": "blogapp-fe963",
+    "storage_bucket": "blogapp-fe963.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:20736361666:android:b2fec98a40d2bf2cc3a75b",
+        "android_client_info": {
+          "package_name": "com.ProjectAnkit.BlogApp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9_WJq9icn7c6fxsvL4b6W5nl0NLAbQeo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

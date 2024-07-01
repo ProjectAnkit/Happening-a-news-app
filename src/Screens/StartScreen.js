@@ -1,14 +1,20 @@
 import {View,StyleSheet,Text, ActivityIndicator} from 'react-native';
-import { useState } from 'react';
-import Mybutton from './Components/Mybutton';
+import { useState ,useEffect} from 'react';
+import Mybutton from '../Components/Mybutton';
 import { Ionicons } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
 
 export default function StartScreen({navigation}){
 
+    useEffect(()=>{
+        navigation.setOptions({
+            headerShown: false,
+        })
+    })
+
   const [iselevation, setiselevation] = useState(true);
   let [loadfont,error] = useFonts({
-    "inter-black" : require("../assets/fonts/Inter-Black.ttf")
+    "Gantari": require('../../assets/fonts/Gantari-VariableFont_wght.ttf'),
   })
 
   if(!loadfont)
@@ -22,12 +28,12 @@ export default function StartScreen({navigation}){
          <View style={{paddingHorizontal: 20,justifyContent: "center",flex: 1,alignItems: "center"}}>
             <View style={{alignItems: "center"}}>
               <Ionicons name="newspaper-outline" size={84} color="white" />
-              <Text style={{fontSize: 26, color: "white", fontWeight: "600",fontFamily: "inter-black"}}>Happening</Text>
+              <Text style={{fontSize: 26, color: "white", fontWeight: "600",fontFamily: "Gantari"}}>Happening</Text>
             </View>
          </View>
 
 
-         <Mybutton buttontxt={"Get Started"} style={style.buttonstyling} onpress={()=> navigation.navigate("login")} onpressin={()=> setiselevation(false)} onpressout={()=> setiselevation(true)} liveelevation={iselevation}/>
+         <Mybutton buttontxt={"Get Started"} style={style.buttonstyling} onpress={()=> navigation.navigate("Login")} onpressin={()=> setiselevation(false)} onpressout={()=> setiselevation(true)} liveelevation={iselevation}/>
 
     </View>
      
@@ -37,7 +43,7 @@ export default function StartScreen({navigation}){
 const style = StyleSheet.create(
   {
     screen: {
-      backgroundColor: "#ffd966",
+      backgroundColor: "#5061ff",
       flex: 1,
       justifyContent :"space-between"
     },
